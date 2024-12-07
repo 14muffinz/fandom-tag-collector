@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Ao3 Fandom Tag Collector",
+  "description": "Allows you to save the list of fandoms from your bookmarks and history pages",
+  "version": "1.0",
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "activeTab"],
+  "host_permissions": [
+    "https://archiveofourown.org/users/*/bookmarks*", 
+    "https://archiveofourown.org/users/*/readings*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://archiveofourown.org/users/*/bookmarks*", "https://archiveofourown.org/users/*/readings*"],
+      "js": ["readtags.js"]
+    }
+  ]
+}
