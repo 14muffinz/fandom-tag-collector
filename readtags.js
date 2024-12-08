@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(
 /** Return fandom tags on page as list */
 function readFandomTags() {
     //try to read tags
-    let tags = $(".fandoms.heading a.tag");
+    let tags = $(".tags.commas.li.characters");
     let tags_text = [];
     for (let tag of tags) {
         tags_text.push(tag.textContent);
